@@ -38,7 +38,6 @@ app.use("/api/application", applicationRoute);
 const __dirname = path.resolve()
 
 
-
 app.use(express.static(path.join(__dirname, "/Frontend/dist")))
 app.get("*", (_, res) => {
     res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html"))
